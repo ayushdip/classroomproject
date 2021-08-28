@@ -4,9 +4,10 @@ import React, { useState } from 'react'
 import '../css/Navbar.css'
 import AddIcon from '@material-ui/icons/Add';
 import Sidebar from './Sidebar';
+import { useStateValue } from '../StateProvider';
 const Navbar = () => {
     const [sidebar,setSidebar] = useState(false);
-
+    const [{user},dispatch] = useStateValue();
     return (
         <div className="navbarSidebar">
             <div className="navbar">
@@ -25,7 +26,7 @@ const Navbar = () => {
                     </IconButton>
                 </div>
                 <div className="navbar__avatar">
-                    <Avatar />
+                    <Avatar src={user.photoURL}/>
                 </div>
             </div>
             {
