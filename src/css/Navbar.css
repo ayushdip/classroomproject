@@ -1,0 +1,17 @@
+.navbar{
+    display: flex;
+    padding : 5px 20px 5px 20px;
+    align-items: center;
+    border-bottom : 1px solid rgb(220,220,220);
+}
+.navbar__add{
+    margin-left: auto;
+}
+.navbar__avatar{
+    margin-left : 10px;
+}
+
+.navbar__logo{
+    color : red;
+    margin-left: 20px;
+}

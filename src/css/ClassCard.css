@@ -1,0 +1,50 @@
+.classcard{
+    display: flex;
+    margin : 20px 40px 20px 40px;
+    flex-wrap: wrap;
+}
+.classcard__class{
+    width : 400px;
+    display: flex;
+    flex-direction: column;
+    margin : 20px;
+    border : 1px solid rgb(220,220,220);
+}
+.classcard__header{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items : flex-start;
+}
+.classcard__header > img{
+    position: absolute;
+    top : 0px;
+    z-index : -3;
+    max-width: 100%;
+    height : 140px;
+    object-fit: cover;
+}
+.classcard__headerTitle{
+    color : white;    
+    font-size: large;
+    margin-left : 10px;
+    font-weight: 600;
+}
+.classcard__headersubTitle{
+    color : white;    
+    font-size: medium;
+    margin-left : 10px;
+    font-weight: 400;
+}
+.classcard__avatar{
+    margin-left: 80%;
+}
+.classcard__status{
+    height : 100px;
+    border-bottom: 1px solid rgb(220,220,220);
+}
+.classcard__footer{
+    display: flex;
+    justify-content: flex-end;
+
+}
