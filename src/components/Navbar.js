@@ -5,6 +5,7 @@ import '../css/Navbar.css'
 import AddIcon from '@material-ui/icons/Add';
 import Sidebar from './Sidebar';
 import { useStateValue } from '../StateProvider';
+import { Link } from 'react-router-dom';
 const Navbar = () => {
     const [sidebar,setSidebar] = useState(false);
     const [{user},dispatch] = useStateValue();
@@ -17,13 +18,17 @@ const Navbar = () => {
                     </IconButton>
 
                 </div>
+                <Link to="/">
                 <div className="navbar__logo">
                     <h3>Online Classroom</h3>
                 </div>
+                </Link>
                 <div className="navbar__add">
-                <IconButton edge="start" color="inherit" aria-label="menu">
+                    <Link to="/new">
+                    <IconButton edge="start" color="inherit" aria-label="menu">
                         <AddIcon />
                     </IconButton>
+                    </Link>
                 </div>
                 <div className="navbar__avatar">
                     <Avatar src={user.photoURL}/>

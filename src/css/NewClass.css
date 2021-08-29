@@ -1,0 +1,34 @@
+.newClass{
+    display: flex;
+    flex-direction: column;
+    border : 1px solid rgb(220,220,220);
+    margin-top: 20px;
+    width : 500px;
+    margin-left: 30%;
+}
+.newClass__top{
+    display: flex;
+    justify-content: space-evenly;
+    width: 500px;
+    background-color: whitesmoke;
+}
+.newClass__top > div{
+    cursor : pointer;
+}
+.newClass__mid{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+.newClass__midItem{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.newClass__midItem > input{
+    margin-left : 30px;
+    padding: 5px;
+    border-radius: 10px;
+    width : 300px;
+}

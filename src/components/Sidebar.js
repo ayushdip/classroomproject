@@ -1,12 +1,18 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import HomeWorkRoundedIcon from '@material-ui/icons/HomeWorkRounded';
 import { Avatar, Button} from '@material-ui/core';
 import '../css/Sidebar.css'
 import { CalendarTodayRounded } from '@material-ui/icons';
+import { Link } from 'react-router-dom';
+import { auth } from '../firebase';
 const Sidebar = () => {
+    useEffect(()=>{
+
+    },[])
     return (
         <div className="sidebar">
             <div className="sidebar__top">
+                <Link to="/">
                 <div className="sidebar__item">
                     <div className="sidebar__itemIcon">
                         <HomeWorkRoundedIcon />
@@ -15,6 +21,7 @@ const Sidebar = () => {
                         <p>Classes</p>
                     </div>
                 </div>
+                </Link>
                 <div className="sidebar__item">
                     <div className="sidebar__itemIcon">
                         <CalendarTodayRounded />
