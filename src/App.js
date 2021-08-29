@@ -7,6 +7,8 @@ import { useStateValue } from './StateProvider';
 import NewClass from './components/NewClass';
 import { useEffect } from 'react';
 import { auth } from './firebase';
+import NavbarClass from './components/NavbarClass';
+import Stream from './components/Stream';
 function App() {
   const [{user},dispatch] = useStateValue();
   useEffect(()=>{
@@ -34,6 +36,10 @@ function App() {
           <Route path="/new">
             <Navbar />
             <NewClass />
+          </Route>
+          <Route path="/classes/:id">
+            <NavbarClass />
+            <Stream />
           </Route>
           <Route path="/">
             <Navbar />

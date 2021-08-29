@@ -1,0 +1,16 @@
+.comment{
+    display: flex;
+    align-items: center;
+}
+.commentWrapper{
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid rgb(220,220,220);
+}
+.commentuser{
+    display: flex;
+    align-items: center;
+}
+.commentuserInfo > p{
+    text-align: left;
+}
