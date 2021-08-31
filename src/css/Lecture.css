@@ -1,0 +1,16 @@
+.material{
+    display: flex;
+    flex-direction: column;
+    width : 50%;
+    align-items: flex-start;
+    border : 1px solid rgb(220,220,220);
+    margin: auto;
+    padding : 20px;
+    margin-top: 30px;
+}
+.material__item{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: rgb(220,220,220);
+}

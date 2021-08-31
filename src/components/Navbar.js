@@ -6,9 +6,16 @@ import AddIcon from '@material-ui/icons/Add';
 import Sidebar from './Sidebar';
 import { useStateValue } from '../StateProvider';
 import { Link } from 'react-router-dom';
+import { auth } from '../firebase';
 const Navbar = () => {
     const [sidebar,setSidebar] = useState(false);
     const [{user},dispatch] = useStateValue();
+    function signout(){
+        if(user){
+            dispatch({type : 'SET_USER',user : null})
+            auth.signOut();
+        }
+    }
     return (
         <div className="navbarSidebar">
             <div className="navbar">
@@ -30,7 +37,7 @@ const Navbar = () => {
                     </IconButton>
                     </Link>
                 </div>
-                <div className="navbar__avatar">
+                <div onClick={signout} style={{cursor : "pointer"}} className="navbar__avatar">
                     <Avatar src={user.photoURL}/>
                 </div>
             </div>

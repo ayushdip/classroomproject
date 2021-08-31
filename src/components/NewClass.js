@@ -35,7 +35,7 @@ const NewClass = () => {
                 role : "Student" ,
                 photoURL : user.photoURL
             })
-            history.push('/');
+            history.push(`/classes/${code}`);
         }
     },[flag])
     useEffect(()=>{
@@ -89,7 +89,7 @@ const NewClass = () => {
                     role : "Teacher" ,
                     photoURL : user.photoURL
                 })  
-                history.push('/');
+                history.push(`/classes/${doc.id}`);
             })
         }
     }

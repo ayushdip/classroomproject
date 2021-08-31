@@ -1,0 +1,76 @@
+.classwork{
+    display: flex;
+    flex-direction: column;
+    width : 50%;
+    margin: auto;
+    margin-top: 20px;
+}
+.classworkMaterial{
+    display: flex;
+    flex-direction: column;
+}
+.classworkMaterial > textarea {
+    background-color: whitesmoke;
+    padding :10px;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+.classworkMaterial > select {
+    background-color: whitesmoke;
+    padding :10px;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+.classworkMaterial > input{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: whitesmoke;
+}
+.studymaterial{
+    display: flex;
+    flex-direction: column;
+}
+.studymaterial__info{
+    display: flex;
+    align-items: center;
+    padding : 10px 10px 10px 40px;
+    background-color: whitesmoke;
+    border-bottom: 1px solid rgb(220,220,220);
+}
+.studymaterial__info > p{
+    margin-left: 30px;
+}
+.assignment{
+    display: flex;
+    flex-direction: column;
+}
+.assignment__info{
+    display: flex;
+    align-items: center;
+    padding : 10px 10px 10px 40px;
+    background-color: whitesmoke;
+    border-bottom: 1px solid rgb(220,220,220);
+}
+.assignment__info > p{
+    margin-left: 30px;
+}
+.uploaded{
+    display: flex;
+    flex-direction: column;
+    background-color: whitesmoke;
+    border : 1px solid rgb(220,220,220);
+    padding : 2px;
+    margin-top: 5px;
+    border-radius: 30px;
+}
+.uploaded__fileName > a{
+    text-decoration: underline !important;
+    color : blue !important;
+    margin-right: 30px;
+}
+.uploaded__fileName{
+    display: flex;
+    justify-content: center;
+}

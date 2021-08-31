@@ -9,6 +9,11 @@ import { useEffect } from 'react';
 import { auth } from './firebase';
 import NavbarClass from './components/NavbarClass';
 import Stream from './components/Stream';
+import People from './components/People';
+import ClassWork from './components/ClassWork';
+import Lecture from './components/Lecture';
+import Assign from './components/Assign';
+
 function App() {
   const [{user},dispatch] = useStateValue();
   useEffect(()=>{
@@ -34,8 +39,24 @@ function App() {
         !user?<Login />:<Router>
         <Switch>
           <Route path="/new">
-            <Navbar />
+            <Navbar/>
             <NewClass />
+          </Route>
+          <Route path="/classes/:id/lec/:lecId">
+            <NavbarClass />
+            <Lecture />
+          </Route>
+          <Route path="/classes/:id/assign/:assignId">
+            <NavbarClass />
+            <Assign />
+          </Route>
+          <Route path="/classes/:id/classwork">
+            <NavbarClass />
+            <ClassWork />
+          </Route>
+          <Route path="/classes/:id/people">
+            <NavbarClass />
+            <People />
           </Route>
           <Route path="/classes/:id">
             <NavbarClass />

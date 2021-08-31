@@ -7,6 +7,8 @@ import { useStateValue } from '../StateProvider';
 import { Button } from '@material-ui/core';
 import firebase from 'firebase';
 import Posts from './Posts';
+import LectureCard from './LectureCard';
+import AssignmentCard from './AssignmentCard';
 const Stream = () => {
     const [classroom,setClassroom] = useState({});
     const [post,setPost] = useState([]);
@@ -70,7 +72,10 @@ const Stream = () => {
 
                     }
                     {
-                        post.map((post)=><Posts postId={post.id} photoURL={post.data.photoURL} displayName={post.data.createdBy} body={post.data.body} timestamp={post.data.timestamp}/>)
+                        post.map((post)=>post.data.type==="study"?
+                        <LectureCard postId={post.id} displayName={post.data.createdBy} timestamp={post.data.timestamp}/>
+                        :post.data.type==="assign"?<AssignmentCard postId={post.id} displayName={post.data.createdBy} timestamp={post.data.timestamp}/>:
+                        <Posts postId={post.id} photoURL={post.data.photoURL} displayName={post.data.createdBy} body={post.data.body} timestamp={post.data.timestamp}/>)
                     }
                 
                 </div>

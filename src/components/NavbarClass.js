@@ -4,16 +4,26 @@ import Sidebar from './Sidebar';
 import '../css/Navbar.css'
 import { useState } from 'react';
 import { Avatar, IconButton } from '@material-ui/core';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import { useStateValue } from '../StateProvider';
 import MenuIcon from '@material-ui/icons/Menu';
 import AddIcon from '@material-ui/icons/Add';
 import db from '../firebase';
+import { auth } from '../firebase';
 const NavbarClass = () => {
     const [sidebar,setSidebar] = useState(false);
     const {id} = useParams();
     const [classroom,setClassroom] = useState({});
-    const [{user},] = useStateValue();
+    const [{user},dispatch] = useStateValue();
+    const [active,setActive] = useState(1);
+    const history = useHistory();
+    function signout(){
+        if(user){
+            dispatch({type : 'SET_USER',user : null})
+            auth.signOut();
+            history.push('/');
+        }
+    }
     useEffect(()=>{
         if(id){
         db.collection('classrom').doc(id)
@@ -37,14 +47,28 @@ const NavbarClass = () => {
                 </div>
                 </Link>
                 <div className="navbar__mid">
+                    <Link onClick={()=>setActive(1)} to={`/classes/${id}`}>
                     <p>Stream</p>
-                    <span className="spanline"></span>
+                    </Link>
+                    {
+                        active==1?<span className="spanline"></span>:<></>
+                    }
                 </div>
                 <div className="navbar__mid">
+                    <Link onClick={()=>setActive(2)} to={`/classes/${id}/classwork`}>
                     <p>Classwork</p>
+                    </Link>
+                    {
+                        active==2?<span className="spanline"></span>:<></>
+                    }
                 </div>
                 <div className="navbar__mid">
+                    <Link onClick={()=>setActive(3)} to={`/classes/${id}/people`}>
                     <p>People</p>
+                    </Link>
+                    {
+                        active==3?<span className="spanline"></span>:<></>
+                    }
                 </div>
                 <div className="navbar__add">
                     <Link to="/new">
@@ -53,7 +77,7 @@ const NavbarClass = () => {
                     </IconButton>
                     </Link>
                 </div>
-                <div className="navbar__avatar">
+                <div onClick={signout} style={{cursor : "pointer"}} className="navbar__avatar">
                     <Avatar src={user.photoURL}/>
                 </div>
             </div>

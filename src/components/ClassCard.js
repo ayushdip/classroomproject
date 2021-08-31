@@ -23,7 +23,7 @@ const ClassCard = ({id}) => {
                     </div>
                 </div>
                 <div className="classcard__status">
-                    <p>Assignement 1 Due Today</p>
+                    <p></p>
                 </div>
                 <div className="classcard__footer">
                     <IconButton>

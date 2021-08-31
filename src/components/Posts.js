@@ -8,6 +8,8 @@ import { useStateValue } from '../StateProvider';
 import db from '../firebase';
 import { useParams } from 'react-router-dom';
 import firebase from 'firebase';
+import AssignmentCard from './AssignmentCard';
+import LectureCard from './LectureCard';
 const Posts = ({photoURL,body,displayName,timestamp,postId}) => {
     const [inp,setInp] = useState("")
     const [{user},] = useStateValue();
