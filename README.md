@@ -2,6 +2,7 @@
 
 This project provides an online learning solution where teachers can form an online classroom and add students. The teacher can then add study materials and assignments for students. The people involved in the group can comment on each post. Right now the app doesn't provide functionality for students to upload their solved assignments for grading purposes. Also video class feature is also not available right now.
 
+
 ## Tools Used
 
 React.js, Firebase, Material UI, Firestore Database

@@ -23,7 +23,7 @@ const Home = () => {
     return (
         <div className="classcard">
             {
-                classId.map((id)=><Link to={`classes/${id}`}><ClassCard id={id}/></Link>)
+                classId.length==0?<Link to="/new">Create or join class</Link>:classId.map((id)=><Link to={`classes/${id}`}><ClassCard id={id}/></Link>)
             }
         </div>
     )
