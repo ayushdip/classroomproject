@@ -81,6 +81,32 @@ const NavbarClass = () => {
                     <Avatar src={user.photoURL}/>
                 </div>
             </div>
+            <div className="navbar__small">
+                <div className="navbar__midSmall">
+                    <Link onClick={()=>setActive(1)} to={`/classes/${id}`}>
+                    <p>Stream</p>
+                    </Link>
+                    {
+                        active==1?<span className="spanline"></span>:<></>
+                    }
+                </div>
+                <div className="navbar__midSmall">
+                    <Link onClick={()=>setActive(2)} to={`/classes/${id}/classwork`}>
+                    <p>Classwork</p>
+                    </Link>
+                    {
+                        active==2?<span className="spanline"></span>:<></>
+                    }
+                </div>
+                <div className="navbar__midSmall">
+                    <Link onClick={()=>setActive(3)} to={`/classes/${id}/people`}>
+                    <p>People</p>
+                    </Link>
+                    {
+                        active==3?<span className="spanline"></span>:<></>
+                    }
+                </div>
+            </div>
             {
                 sidebar?<Sidebar />:<></>
             }

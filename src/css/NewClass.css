@@ -3,13 +3,13 @@
     flex-direction: column;
     border : 1px solid rgb(220,220,220);
     margin-top: 20px;
-    width : 500px;
-    margin-left: 30%;
+    width : 50%;
+    margin : auto;
 }
 .newClass__top{
     display: flex;
     justify-content: space-evenly;
-    width: 500px;
+    width: 100%;
     background-color: whitesmoke;
 }
 .newClass__top > div{
@@ -19,16 +19,27 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px;
+    width : 100%;
+}
+.newClass__mid > form{
+    width : 100%;
 }
 .newClass__midItem{
     display: flex;
     align-items: center;
     justify-content: space-evenly;
 }
+.newClass__midItem > p{
+    flex : 0.3;
+}
 .newClass__midItem > input{
-    margin-left : 30px;
     padding: 5px;
     border-radius: 10px;
-    width : 300px;
+    width : 100%;
+    flex : 0.7;
+}
+@media screen and (max-width:480px){
+    .newClass{
+        width : 100%;
+    }
 }

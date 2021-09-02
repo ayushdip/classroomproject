@@ -1,35 +1,44 @@
 .stream{
     display: flex;
-    margin-top : 20px;
     flex-direction: column;
     align-items: center;
+    width : 60%;
+    margin : auto;
+    margin-top : 20px;
 }
 .stream__header{
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
+    width : 100%;
 }
 .stream__header > img{
-    position: absolute;
+    position: relative;
     border-radius: 20px;
     z-index: -3;
     top : 0;
+    width: 100%;
+    max-height: 200px;
 }
 .stream__header > h1{
+    position: absolute;
     color : white;
+    top : 0;
+    left : 40px;
 }
 .stream__header > p{
     color : white;
     font-weight: 600;
+    position : absolute;
+    top : 100px;
+    left : 40px;
 }
 .stream__mid{
     display: flex;
-    margin-top: 130px;
-    min-width: 1000px;
+    margin-top: 20px;
     align-items: flex-start;
-    flex-wrap: wrap;
-    max-width: 60%;
+    width: 100%;
 }
 .stream__left{
     display: flex;
@@ -38,11 +47,13 @@
     padding : 20px;
     flex: 0.3;
     flex-wrap: wrap;
+    border-radius: 20px;
 }
 .stream__right{
     display: flex;
     flex-direction: column;
     flex: 0.7;
+    margin-left: 20px;
 }
 .stream__item{
     display: flex;
@@ -50,7 +61,6 @@
     justify-content: space-evenly;
     align-items: center;
     border: 1px solid rgb(220,220,220);
-    margin-left: 20px;
     border-radius: 20px;
     margin-bottom: 20px;
     cursor : pointer;
@@ -59,17 +69,55 @@
     padding : 20px;
     background-color: whitesmoke;
     border : none;
-    border-radius: 30px;
+    border-radius: 20px;
+    width: 95%;
 }
 .stream__itemForm{
     display: flex;
-    padding : 20px;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
     border: 1px solid rgb(220,220,220);
-    margin-left: 20px;
     border-radius: 20px;
     margin-bottom: 20px;
     cursor : pointer;
+    width: 100%;
+}
+
+@media screen and (max-width : 720px) {
+    .stream{
+        width : 100%;
+    }
+    .stream__header > h1{
+        top : 5px;
+        font-size: 5vw;
+    }
+    .stream__header > p{
+        top : 30px;
+        font-size: 3vw;
+    }
+    .stream__mid{
+        flex-direction: column;
+        align-items: center;
+    }
+    .stream__left{
+        width : 100%;
+        padding : 0px;
+        margin : auto;
+        margin-bottom: 8px;
+        flex: 1;
+    }
+    .stream__right{
+        margin-left: 0px;
+        width : 100%;
+    }
+    .stream__item{
+        padding : 5px;
+    }
+}
+@media screen and (max-width : 480){
+
+}
+@media screen and (max-width : 240px){
+
 }

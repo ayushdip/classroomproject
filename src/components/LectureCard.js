@@ -31,8 +31,8 @@ const LectureCard = ({postId,displayName,timestamp}) => {
                 <div className="lecture__icon">
                     <ChromeReaderModeIcon />
                 </div>
-                <p>{displayName} added a new study material</p>
-                <p style={{fontSize : "small",marginLeft : "auto",marginRight : "15px"}}>{new Date(timestamp?.toDate()).toUTCString().substr(0,12)}</p>
+                <p className="first">{displayName} added a new study material</p>
+                <p className="second">{new Date(timestamp?.toDate()).toUTCString().substr(0,12)}</p>
             </div>
             </Link>
             <PostComment postId={postId}/>

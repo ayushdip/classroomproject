@@ -63,7 +63,7 @@ const Stream = () => {
                             <p>Announce something to class</p>
                         </div>:
                         <div className="stream__itemForm">
-                            <textarea onChange={(e)=>setMesg(e.target.value)}  placeholder="Announce Something to Class"rows="15" cols="100"></textarea>
+                            <textarea onChange={(e)=>setMesg(e.target.value)}  placeholder="Announce Something to Class" rows="15"></textarea>
                             <div className="stream__itemBottom">
                                 <Button onClick={sendPost} style={{marginRight : "10px"}} variant="contained" color="primary" disabled={mesg=="" && "true"}>Post</Button>
                                 <Button onClick={()=>setTextbox(false)} variant="contained" color="secondary">Cancel</Button>

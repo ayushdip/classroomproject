@@ -2,20 +2,19 @@
     display: flex;
     flex-direction: column;
     border: 1px solid rgb(220,220,220);
-    margin-left: 20px;
     border-radius: 20px;
     margin-bottom: 20px;
     padding : 10px;
 }
 .stream__itemEnd{
     display: flex;
-    padding: 10px 20px 10px 20px;
+    padding: 10px 2px 10px 2px;
     align-items : center;
 }
 .stream__itemEnd > input{
     padding : 10px;
     margin-left: 10px;
-    width : 600px;
+    width : 80%;
     border-radius: 30px;
     border : none;
     background-color: whitesmoke;

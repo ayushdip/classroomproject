@@ -14,3 +14,24 @@
     align-items: flex-start;
     background-color: rgb(220,220,220);
 }
+.stream__itemEnd{
+    width : 100%;
+    max-width: 100%;
+}
+.stream__itemEnd > input{
+    width : 90%;
+}
+@media screen and (max-width : 720px){
+    .material{
+        width : 100%;
+        padding: 5px;
+    }
+    .stream__itemEnd{
+        width : 100%;
+        padding : 0px;
+        max-width: 100%;
+    }
+    .stream__itemEnd > input{
+        width : 90%;
+    }
+}

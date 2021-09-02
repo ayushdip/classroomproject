@@ -31,8 +31,8 @@ const AssignmentCard = ({postId,displayName,timestamp}) => {
                 <div className="lecture__icon">
                     <Assignment />
                 </div>
-                <p>{displayName} added a new Assignment</p>
-                <p style={{fontSize : "small",marginLeft : "auto",marginRight : "15px"}}>{new Date(timestamp?.toDate()).toUTCString().substr(0,12)}</p>
+                <p class="first">{displayName} added a new Assignment</p>
+                <p class="second">{new Date(timestamp?.toDate()).toUTCString().substr(0,12)}</p>
             </div>
             </Link>
             <PostComment postId={postId}/>

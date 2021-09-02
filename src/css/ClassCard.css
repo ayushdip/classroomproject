@@ -1,8 +1,9 @@
 .classcard__class{
-    width : 400px;
     display: flex;
     flex-direction: column;
-    margin : 20px;
+    margin : 10px;
+    width : 300px;
+    max-width: 100%;
     border : 1px solid rgb(220,220,220);
 }
 .classcard__header{
@@ -42,4 +43,9 @@
     display: flex;
     justify-content: flex-end;
 
+}
+@media screen and (max-width : 480px){
+    .classcard__class{
+        width : 250px;
+    }
 }

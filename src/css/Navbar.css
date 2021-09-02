@@ -1,3 +1,12 @@
+.navbar__sidebar{
+    display: flex;
+    flex-direction: column;
+}
+.navbar__midSmall{
+    display: none;
+    flex-direction: column;
+    margin-left: auto;
+}
 .navbar{
     display: flex;
     padding : 5px 20px 5px 20px;
@@ -24,10 +33,39 @@ a{
     flex-direction: column;
     margin-left: auto; 
 }
+
 .spanline{
     border-top : 5px solid green;
     margin-bottom : -15px;
     margin-left: -30px;
     margin-right: -30px;
     border-radius: 10px;
+}
+@media screen and (max-width : 720px) {
+    .navbar__mid{
+        display: none;
+    }
+    .navbar__midSmall{
+        display: flex;
+        margin : auto;
+    }
+    .navbar__small{
+        display: flex;
+        align-items : center;
+        justify-content: space-evenly;
+        border-bottom: 1px solid rgb(220,220,220);
+    }
+    .spanline{
+        border-top : 5px solid green;
+        margin-bottom : 0px;
+        margin-left: -30px;
+        margin-right: -30px;
+        border-radius: 10px;
+    }
+}
+@media screen and (max-width : 480){
+
+}
+@media screen and (max-width : 240px){
+
 }

@@ -1,29 +1,33 @@
 .lecture{
     display: flex;
     border: 1px solid rgb(220,220,220);
-    margin-left: 20px;
     border-radius: 20px;
     margin-bottom: 20px;
     flex-direction: column;
-    padding :10px;
 }
 .lecture__details{
     display: flex;
     align-items: center;
     background-color: lightcyan;
-    width: 103%;
-    padding : 20px 0px 20px 0px;
+    width: 100%;
+    padding : 10px 0px 10px 0px;
     border-bottom: 1px solid rgb(220,220,220);
-    margin: -10px;
     border-radius: 20px;
 }
 .MuiSvgIcon-root{
     color : green;
 }
-.lecture__details > p{
-    margin-left: 30px;
+.lecture__details > .first{
+    font-size: 2vh;
+    flex : 0.8;
+    text-align: left;
+}
+.lecture__details > .second{
+    font-size: 2vh;
+    flex : 0.2;
 }
 .lecture__icon{
     padding : 5px;
     margin-left: 20px;
+    flex : 0.1;
 }

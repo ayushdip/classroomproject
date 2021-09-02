@@ -38,3 +38,8 @@
     margin-left: 20px;
     font-weight: 600;
 }
+@media screen and (max-width : 720px){
+    .people{
+        width : 100%;
+    }
+}

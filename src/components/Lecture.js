@@ -36,7 +36,7 @@ const Lecture = () => {
         <div className="material">
             <div clasName="material__item">
                 <h1>{mat?.data?.title}</h1>
-                <p style={{whiteSpace : "pre-line"}}>{mat?.data?.body}</p>
+                <p style={{whiteSpace : "pre-line", textAlign : "left"}}>{mat?.data?.body}</p>
                 {
                     mat?.data?.files.map((file)=><a style={{backgroundColor : "whitesmoke",padding : "10px"}}target="_blank" href={file.URL}>{file.name}</a>)
                 }
