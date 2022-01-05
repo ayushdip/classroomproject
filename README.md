@@ -29,6 +29,7 @@ The classwork page appears differently for teachers and students. For teachers a
 
 This page shows information of all people who are added to the particular classroom.
 
-### Future Scope
+### Video Call
 
-Right now the students can't submit the assignments and grading feature is not available to teachers. Also feature for video classes is not available right now. Comming soon !
+Teachers and students can attend a video call by using the video chat icon on the navbar
+
